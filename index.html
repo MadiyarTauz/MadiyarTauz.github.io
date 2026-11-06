@@ -1,0 +1,374 @@
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Приглашение для Макоси ♡</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f7f1eb;
+    color: #40332e;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+    max-width: 650px;
+    background: #fffdfb;
+    padding: 65px 45px;
+    text-align: center;
+    border: 1px solid #e8dcd1;
+    box-shadow: 0 20px 70px rgba(80, 50, 35, .08);
+    position: relative;
+    animation: appear 1.2s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid #eadbd0;
+    pointer-events: none;
+}
+
+.top {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #aa8878;
+    margin-bottom: 35px;
+}
+
+.heart {
+    font-size: 35px;
+    color: #bd8278;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(43px, 8vw, 67px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: #bd8278;
+    font-style: italic;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 2;
+    color: #897970;
+    max-width: 390px;
+    margin: 0 auto 35px;
+}
+
+.divider {
+    width: 65px;
+    height: 1px;
+    background: #c9a99a;
+    margin: 30px auto;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 35px 0;
+}
+
+.detail {
+    padding: 15px 5px;
+}
+
+.label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #ad8d7e;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.value {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+}
+
+.message {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #80685d;
+    margin: 30px auto;
+    max-width: 430px;
+}
+
+.extra {
+    margin-top: 35px;
+    line-height: 1.8;
+}
+
+.extra .label {
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.extra .value {
+    font-size: 20px;
+}
+
+button {
+    border: none;
+    background: #a9796c;
+    color: white;
+    padding: 17px 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 30px;
+}
+
+button:hover {
+    background: #805b51;
+    transform: translateY(-3px);
+}
+
+.confirmation {
+    display: none;
+    margin-top: 25px;
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #a9796c;
+    animation: appear .6s ease;
+}
+
+.footer {
+    margin-top: 35px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: #ad9185;
+    font-size: 17px;
+}
+
+.decor {
+    position: fixed;
+    color: #d6b7a9;
+    opacity: .4;
+    font-size: 25px;
+    animation: float 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.d1 { top: 10%; left: 10%; }
+.d2 { top: 20%; right: 12%; animation-delay: 1s; }
+.d3 { bottom: 15%; left: 13%; animation-delay: 2s; }
+.d4 { bottom: 10%; right: 10%; animation-delay: 3s; }
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@media(max-width:500px) {
+    .card {
+        padding: 55px 23px;
+    }
+
+    .details {
+        gap: 5px;
+    }
+
+    .detail .value {
+        font-size: 16px;
+    }
+
+    .detail .label {
+        font-size: 9px;
+    }
+
+    .message {
+        font-size: 17px;
+    }
+
+    .extra .value {
+        font-size: 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="decor d1">✧</div>
+<div class="decor d2">♡</div>
+<div class="decor d3">✧</div>
+<div class="decor d4">♡</div>
+
+<div class="page">
+
+<div class="card">
+
+<div class="top">
+A special invitation
+</div>
+
+<div class="heart">♡</div>
+
+<h1>
+Для тебя,<br>
+<span>Макося</span>
+</h1>
+
+<div class="divider"></div>
+
+<p class="subtitle">
+Я хочу пригласить тебя провести один особенный вечер вместе.
+Без спешки, без суеты — только приятная атмосфера и хорошие воспоминания.
+</p>
+
+<div class="details">
+
+<div class="detail">
+<div class="label">Дата</div>
+<div class="value">9 ноября</div>
+</div>
+
+<div class="detail">
+<div class="label">Время</div>
+<div class="value">18:00</div>
+</div>
+
+<div class="detail">
+<div class="label">Место</div>
+<div class="value">Roastbeef</div>
+</div>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="message">
+«Некоторые вечера хочется запомнить надолго.
+Давай сделаем этот одним из них».
+</p>
+
+<div class="extra">
+
+<div class="label">ДРЕСС-КОД</div>
+
+<div class="value">
+Ты прекрасна в любой одежде ♡
+</div>
+
+<div class="label">С СОБОЙ</div>
+
+<div class="value">
+Прекрасное настроение ✨
+</div>
+
+</div>
+
+<button onclick="acceptInvitation()">
+Я буду ❤️
+</button>
+
+<div class="confirmation" id="confirmation">
+Тогда до встречи, Макося! ♡
+</div>
+
+<div class="footer">
+С теплом, Мадияр
+</div>
+
+</div>
+</div>
+
+<script>
+function acceptInvitation() {
+    const message = document.getElementById("confirmation");
+
+    message.style.display = "block";
+
+    document.querySelector("button").innerText = "До встречи ❤️";
+
+    createHearts();
+}
+
+function createHearts() {
+    for (let i = 0; i < 18; i++) {
+
+        const heart = document.createElement("div");
+
+        heart.innerHTML = "♡";
+
+        heart.style.position = "fixed";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "-30px";
+        heart.style.color = "#bd8278";
+        heart.style.fontSize = "25px";
+        heart.style.pointerEvents = "none";
+        heart.style.zIndex = "999";
+
+        document.body.appendChild(heart);
+
+        heart.animate([
+            { transform: "translateY(0)", opacity: 1 },
+            { transform: "translateY(-100vh)", opacity: 0 }
+        ], {
+            duration: 3000 + Math.random() * 2000
+        });
+
+        setTimeout(() => heart.remove(), 5000);
+    }
+}
+</script>
+
+</body>
+</html>
+```
